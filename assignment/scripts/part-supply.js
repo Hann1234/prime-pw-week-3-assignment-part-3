@@ -40,12 +40,20 @@ for (let i = 0; i < supplyChanges.length; i++) {
   }
 }
 
-//We were literally supposed to skip supplyChanges[i] = 0 right?
+//We were literally supposed to skip over supplyChanges[i] = 0 right?
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+for (supplies of supplyChanges) {
+  if (supplies > 0) {
+    console.log(`Added ${supplies} parts.`);
+  }
+  else if (supplies < 0) {
+    console.log(`Part count ${supplies}.`)
+  }
+}
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
